@@ -27,5 +27,3 @@ RUN tar -xvf "blender-${major_version}.${minor_version}-linux64.tar.xz"
 RUN rm "blender-${major_version}.${minor_version}-linux64.tar.xz"
 
 RUN mv "./blender-${major_version}.${minor_version}-linux64" "./blender"
-
-wget -c "https://download.blender.org/release/Blender2.90/blender-2.90.1-linux64.tar.xz" -O "blender-2.90.1-linux64.tar.xz"
