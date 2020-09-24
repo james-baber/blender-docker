@@ -1,8 +1,8 @@
-FROM adamrehn/ue4-full:4.25.1-opengl
-
+ARG image
 ARG major_version
-
 ARG minor_version
+
+FROM $image
 
 USER root
 
