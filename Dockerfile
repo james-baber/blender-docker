@@ -1,8 +1,8 @@
-ARG image
-ARG major_version
-ARG minor_version
+ARG IMAGE
+ARG MAJOR_VERSION
+ARG MINOR_VERSION
 
-FROM $image
+FROM $IMAGE
 
 USER root
 
@@ -20,10 +20,10 @@ USER ue4
 
 WORKDIR /home/ue4/
 
-RUN  wget -c "https://download.blender.org/release/Blender${major_version}/blender-${major_version}.${minor_version}-linux64.tar.xz" -O "blender-${major_version}.${minor_version}-linux64.tar.xz"
+RUN  wget -c "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz" -O "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
 
-RUN tar -xvf "blender-${major_version}.${minor_version}-linux64.tar.xz"
+RUN tar -xvf "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
 
-RUN rm "blender-${major_version}.${minor_version}-linux64.tar.xz"
+RUN rm "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
 
-RUN mv "./blender-${major_version}.${minor_version}-linux64" "./blender"
+RUN mv "./blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64" "./blender"
