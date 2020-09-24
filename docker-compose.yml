@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  blender-unreal:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        username: user
+        password: password
+        IMAGE: ${IMAGE}
+        MAJOR_VERSION: ${MAJOR_VERSION}
+        MINOR_VERSION: ${MINOR_VERSION}

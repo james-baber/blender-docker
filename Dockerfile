@@ -1,11 +1,8 @@
 ARG IMAGE
-ARG MAJOR_VERSION=2.90
-ARG MINOR_VERSION=1
+ARG MAJOR_VERSION
+ARG MINOR_VERSION
 
 FROM $IMAGE
-
-ENV MAJOR_VERSION $MAJOR_VERSION
-ENV MINOR_VERSION $MINOR_VERSION
 
 USER root
 
@@ -22,8 +19,6 @@ RUN apt install -y libfontconfig1 libxrender1
 USER ue4
 
 WORKDIR /home/ue4/
-
-RUN echo "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
 
 RUN  wget -c "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz" -O "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
 
