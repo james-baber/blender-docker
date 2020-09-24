@@ -20,6 +20,12 @@ USER ue4
 
 WORKDIR /home/ue4/
 
+RUN echo $IMAGE
+RUN echo $MAJOR_VERSION
+RUN echo $MINOR_VERSION
+
+RUN echo "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
+
 RUN  wget -c "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz" -O "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
 
 RUN tar -xvf "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
