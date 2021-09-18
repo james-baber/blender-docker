@@ -21,10 +21,10 @@ USER ue4
 
 WORKDIR /home/ue4/
 
-RUN  wget -c "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz" -O "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
+RUN  wget -c "https://download.blender.org/release/Blender${MAJOR_VERSION}/blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux-x64.tar.xz" -O "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux-x64.tar.xz"
 
-RUN tar -xvf "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
+RUN tar -xvf "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux-x64.tar.xz"
 
-RUN rm "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64.tar.xz"
+RUN rm "blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux-x64.tar.xz"
 
-RUN mv "./blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux64" "./blender"
+RUN mv "./blender-${MAJOR_VERSION}.${MINOR_VERSION}-linux-x64" "./blender"
